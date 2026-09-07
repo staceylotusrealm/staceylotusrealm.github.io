@@ -69,6 +69,26 @@ by itself and shows a thank-you.
 PUTTING IT ONLINE
 -----------------
 
-Drag this whole folder onto netlify.com/drop and it is live in
-about ten seconds, on a free address. A proper domain name
-(staceylotusrealm.com or similar) can be pointed at it later.
+The site is set up to publish to GitHub Pages at:
+
+    https://fractal-freak.github.io/staceylotusrealm/
+
+Run this once from this folder to put it live:
+
+    gh repo create staceylotusrealm --public --source=. --push
+    gh api -X POST repos/fractal-freak/staceylotusrealm/pages \
+      -f "source[branch]=main" -f "source[path]=/"
+
+After that, any change goes live with:
+
+    git add -A && git commit -m "update" && git push
+
+
+THE QR CODE
+-----------
+
+assets/lotus-realm-qr.png   980x980, for screens and small prints
+assets/lotus-realm-qr.svg   scales to any size, use this for printing
+
+Both point at the GitHub Pages address above and were checked by
+scanning them back. They will not work until the site is published.
