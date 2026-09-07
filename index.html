@@ -534,9 +534,6 @@ form{
 .field-row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
 @media (max-width:560px){ .field-row{ grid-template-columns:1fr; } }
 form .btn{ width:100%; }
-.form-note{
-  margin:16px 0 0; font-size:.82rem; color:var(--ink-mute); text-align:center;
-}
 .form-status{
   margin-top:16px; padding:14px 18px; border-radius:var(--r-sm);
   font-size:.9rem; display:none;
@@ -971,7 +968,6 @@ footer .brand .name small{ color:rgba(255,246,234,.55); }
             <textarea id="f-msg" name="message" required placeholder="As much or as little as you want to share."></textarea>
           </div>
           <button class="btn btn-sun" type="submit">Send your note</button>
-          <p class="form-note">Nothing you write here is shared with anyone.</p>
           <div class="form-status" id="form-status" role="status"></div>
         </form>
       </div>
