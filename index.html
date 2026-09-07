@@ -223,16 +223,6 @@ nav.links a:hover::after{ transform:scaleX(1); }
   position:absolute; inset:-30% -10% auto; height:130%;
   pointer-events:none; z-index:0;
 }
-.sunburst{
-  position:absolute; left:50%; top:44%;
-  width:min(1180px,150vw); aspect-ratio:1;
-  transform:translate(-50%,-50%);
-  opacity:.5;
-  animation:spin 150s linear infinite;
-}
-@keyframes spin{ to{ transform:translate(-50%,-50%) rotate(360deg); } }
-@media (prefers-reduced-motion: reduce){ .sunburst{ animation:none; } }
-
 .glow{
   position:absolute; border-radius:50%; filter:blur(70px); opacity:.5;
 }
@@ -637,13 +627,6 @@ footer .brand .name small{ color:rgba(255,246,234,.55); }
       <div class="glow a"></div>
       <div class="glow b"></div>
       <div class="glow c"></div>
-      <svg class="sunburst" viewBox="0 0 400 400" fill="none">
-        <g stroke="#F2683C" stroke-width="1" opacity=".38" stroke-linecap="round">
-          <circle cx="200" cy="200" r="120" stroke-dasharray="1 9"/>
-          <circle cx="200" cy="200" r="158" stroke-dasharray="1 13"/>
-          <circle cx="200" cy="200" r="196" stroke-dasharray="1 17" stroke="#7B4BA8"/>
-        </g>
-      </svg>
     </div>
 
     <div class="wrap">
