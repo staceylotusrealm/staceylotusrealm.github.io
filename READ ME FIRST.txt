@@ -5,29 +5,15 @@ Everything is in one file: index.html
 Open it in any browser to look at it. Nothing to install.
 
 
-WHAT IS STILL MISSING
----------------------
+WHAT IS STILL OPEN
+------------------
 
-1. Her booking email address. Nothing else is holding the
-   contact form back.
+Two spots are flagged inside index.html. Search the file for
+class="todo" to find them. Both need a yes from Stacey before
+they are treated as settled.
 
-2. Her prices for each of the five sessions.
-
-3. Two things to check with her before this goes public:
-
-   - The spelling of her name. "Stacey Simpson" was taken from a
-     collaborator's Instagram caption, not from her own page.
-
-   - The quote in the purple section. Ami of ami.co.beauty wrote it
-     about Stacey on Instagram. It is public, but she should be
-     asked before it is used as a testimonial on a website.
-
-Everything else on the page is drawn from what she has posted
-herself: the Greek astrology and myth pilgrimage, the NORWAC
-scholarship from the Washington State Astrological Association,
-Vancouver, and the five services from her Instagram bio.
-
-Her photo is already in place.
+Her photo, her email address and her five services are all in.
+Prices are deliberately off the page for now.
 
 
 HOW TO FILL THEM IN
@@ -69,26 +55,27 @@ by itself and shows a thank-you.
 PUTTING IT ONLINE
 -----------------
 
-The site is set up to publish to GitHub Pages at:
+Free, and the address does not mention GitHub:
 
-    https://fractal-freak.github.io/staceylotusrealm/
+  1. Sign up at app.netlify.com (the GitHub login is quickest).
+  2. Drag this whole folder onto app.netlify.com/drop
+  3. Site configuration > Change site name > staceylotusrealm
 
-Run this once from this folder to put it live:
+That gives:  https://staceylotusrealm.netlify.app
 
-    gh repo create staceylotusrealm --public --source=. --push
-    gh api -X POST repos/fractal-freak/staceylotusrealm/pages \
-      -f "source[branch]=main" -f "source[path]=/"
+To update it later, drag the folder onto the same drop page again.
 
-After that, any change goes live with:
-
-    git add -A && git commit -m "update" && git push
+A real domain like staceylotusrealm.com costs about $12 a year from
+any registrar. Netlify will point at it for free once it is bought,
+and the netlify.app address keeps working afterwards.
 
 
 THE QR CODE
 -----------
 
-assets/lotus-realm-qr.png   980x980, for screens and small prints
+assets/lotus-realm-qr.png   990x990, for screens and small prints
 assets/lotus-realm-qr.svg   scales to any size, use this for printing
 
-Both point at the GitHub Pages address above and were checked by
-scanning them back. They will not work until the site is published.
+Both point at https://staceylotusrealm.netlify.app and were checked
+by scanning them back. They will not work until the site is up and
+the site name has been changed to staceylotusrealm.
