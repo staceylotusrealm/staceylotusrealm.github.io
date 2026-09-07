@@ -349,6 +349,20 @@ h3{ font-size:1.28rem; margin-bottom:10px; }
 .about-body p + p{ margin-top:1.1em; }
 .about-body strong{ color:var(--ink); font-weight:700; }
 
+.side-card{
+  background:linear-gradient(160deg,#FFF3DF,#FFE6EC 52%,#DFF2F0);
+  border-radius:var(--r-lg);
+  padding:clamp(26px,3.4vw,38px);
+  box-shadow:var(--shadow-sm);
+  position:sticky; top:104px;
+}
+@media (max-width:900px){ .side-card{ position:static; } }
+.side-card h3{ font-size:1.34rem; }
+.side-card p{ color:var(--ink-soft); font-size:.96em; margin:0 0 20px; }
+.side-card ul{ list-style:none; margin:0; padding:0; display:grid; gap:13px; }
+.side-card li{ display:flex; gap:12px; align-items:flex-start; font-size:.94em; color:var(--ink); }
+.side-card li svg{ width:19px; height:19px; flex:none; margin-top:3px; color:var(--ember); }
+
 /* ---------- offerings ---------- */
 
 .offerings{ background:var(--sand); }
@@ -849,9 +863,9 @@ footer .brand .name small{ color:rgba(255,246,234,.55); }
             oracle reader in Vancouver, British Columbia. I have been doing this a long time.
           </p>
           <p>
-            I still study, and I still travel for it. Last year that meant an astrology and myth
-            pilgrimage through Greece, up into the Peloponnesian mountains, standing in the places the
-            old stories came from.
+            I am always learning, and always travelling for it. Last year that meant an astrology and
+            myth pilgrimage through Greece, up into the Peloponnesian mountains, standing in the places
+            the old stories came from.
           </p>
           <p>
             People tend to stay. Someone books one session, and years later we are still talking. That
