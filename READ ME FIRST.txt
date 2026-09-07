@@ -1,0 +1,74 @@
+LOTUS REALM — Stacey's website
+================================
+
+Everything is in one file: index.html
+Open it in any browser to look at it. Nothing to install.
+
+
+WHAT IS STILL MISSING
+---------------------
+
+1. Her booking email address. Nothing else is holding the
+   contact form back.
+
+2. Her prices for each of the five sessions.
+
+3. Two things to check with her before this goes public:
+
+   - The spelling of her name. "Stacey Simpson" was taken from a
+     collaborator's Instagram caption, not from her own page.
+
+   - The quote in the purple section. Ami of ami.co.beauty wrote it
+     about Stacey on Instagram. It is public, but she should be
+     asked before it is used as a testimonial on a website.
+
+Everything else on the page is drawn from what she has posted
+herself: the Greek astrology and myth pilgrimage, the NORWAC
+scholarship from the Washington State Astrological Association,
+Vancouver, and the five services from her Instagram bio.
+
+Her photo is already in place.
+
+
+HOW TO FILL THEM IN
+-------------------
+
+Open index.html in any text editor.
+
+Everything marked in yellow on the page is a placeholder.
+Search the file for  class="todo"  to find each one.
+Delete the  <span class="todo"> ... </span>  wrapper once you
+replace the words inside it, and the yellow marking goes away.
+
+Near the bottom of the file there is a block that looks like this:
+
+    const CONFIG = {
+      email: "",
+      formEndpoint: "",
+      instagram: "https://www.instagram.com/staceylotusrealm",
+      facebook:  "https://www.facebook.com/staceylotusrealm"
+    };
+
+Put Stacey's email between the first pair of quote marks.
+That switches on the email link and the contact form.
+
+
+THE CONTACT FORM
+----------------
+
+As it stands, the form opens the visitor's own email app with
+the message already written out, ready to send. That works
+everywhere and costs nothing.
+
+If Stacey would rather have messages land in her inbox on their
+own, sign up free at formspree.io, and paste the address it gives
+you into  formEndpoint  in the block above. The form then sends
+by itself and shows a thank-you.
+
+
+PUTTING IT ONLINE
+-----------------
+
+Drag this whole folder onto netlify.com/drop and it is live in
+about ten seconds, on a free address. A proper domain name
+(staceylotusrealm.com or similar) can be pointed at it later.
