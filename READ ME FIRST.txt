@@ -55,27 +55,37 @@ by itself and shows a thank-you.
 PUTTING IT ONLINE
 -----------------
 
-Free, and the address does not mention GitHub:
+The address will be:  https://staceylotusrealm.github.io
 
-  1. Sign up at app.netlify.com (the GitHub login is quickest).
-  2. Drag this whole folder onto app.netlify.com/drop
-  3. Site configuration > Change site name > staceylotusrealm
+That name comes from the GitHub account it lives under, so it has
+to be created under an organisation called exactly
+"staceylotusrealm". The name was free as of 6 Sept 2026.
 
-That gives:  https://staceylotusrealm.netlify.app
+  1. Go to github.com/organizations/plan and pick the Free plan.
+  2. Name the organisation:  staceylotusrealm
+  3. Then run this from inside this folder:
 
-To update it later, drag the folder onto the same drop page again.
+     gh repo create staceylotusrealm/staceylotusrealm.github.io \
+       --public --source=. --push
+
+It goes live a minute or two later. After that, updates are:
+
+     git add -A && git commit -m "update" && git push
 
 A real domain like staceylotusrealm.com costs about $12 a year from
-any registrar. Netlify will point at it for free once it is bought,
-and the netlify.app address keeps working afterwards.
+any registrar. GitHub will serve it for free once it is bought, and
+the github.io address keeps redirecting to it afterwards.
 
 
-THE QR CODE
------------
+THE QR CODE AND CARD
+--------------------
 
-assets/lotus-realm-qr.png   990x990, for screens and small prints
-assets/lotus-realm-qr.svg   scales to any size, use this for printing
+qr.html                          the card as a web page, opens on a
+                                 phone, and prints
+assets/lotus-realm-qr-card.png   2160x3120, the card as an image
+assets/lotus-realm-qr.png        990x990, the bare code
+assets/lotus-realm-qr.svg        the bare code, scales to any size
 
-Both point at https://staceylotusrealm.netlify.app and were checked
-by scanning them back. They will not work until the site is up and
-the site name has been changed to staceylotusrealm.
+All of them point at https://staceylotusrealm.github.io and were
+checked by scanning them back. They stay dead until the site is
+published under that exact organisation name.

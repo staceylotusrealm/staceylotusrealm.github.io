@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lotus Realm · scan to book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Karla:wght@400..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sun:#FFB627; --ember:#F2683C; --rose:#E2467E; --violet:#7B4BA8;
+  --ink:#2C1B3D; --ink-soft:#5C4B6B; --ink-mute:#8B7C97;
+  --cream:#FFFAF2; --shell:#FFFFFF;
+  --display:"Fraunces",ui-serif,Georgia,serif;
+  --sans:"Karla",ui-sans-serif,system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; background:var(--cream); color:var(--ink);
+  font-family:var(--sans);
+  display:flex; align-items:center; justify-content:center;
+  padding:clamp(16px,4vmin,48px);
+  overflow:hidden;
+}
+.bg{position:fixed; inset:0; pointer-events:none; overflow:hidden}
+.glow{position:absolute; border-radius:50%; filter:blur(80px); opacity:.55}
+.g1{width:72vmin;height:72vmin;left:-18vmin;top:-16vmin;background:radial-gradient(circle,#FFD98A,transparent 68%)}
+.g2{width:66vmin;height:66vmin;right:-20vmin;top:-10vmin;background:radial-gradient(circle,#F7B7D3,transparent 68%)}
+.g3{width:70vmin;height:70vmin;left:26vmin;bottom:-26vmin;background:radial-gradient(circle,#A8E3DF,transparent 70%)}
+
+.card{
+  position:relative;
+  width:min(100%, 62vh);
+  background:var(--shell);
+  border-radius:clamp(24px,4vmin,44px);
+  box-shadow:0 30px 80px rgba(44,27,61,.16), 0 2px 10px rgba(44,27,61,.05);
+  padding:clamp(26px,5vmin,52px) clamp(24px,5vmin,52px) clamp(22px,4vmin,42px);
+  text-align:center;
+  display:flex; flex-direction:column; align-items:center;
+  gap:clamp(16px,3vmin,28px);
+}
+
+.mark{width:clamp(44px,8vmin,72px); height:auto; display:block}
+
+.brand{line-height:1}
+.brand .name{
+  font-family:var(--display); font-weight:700;
+  font-size:clamp(1.7rem,5.2vmin,2.9rem);
+  letter-spacing:-.02em;
+}
+.brand .who{
+  margin-top:.55em;
+  font-size:clamp(.62rem,1.5vmin,.82rem);
+  font-weight:700; letter-spacing:.3em; text-transform:uppercase;
+  color:var(--ink-mute);
+}
+
+.rule{
+  width:clamp(40px,7vmin,64px); height:3px; border-radius:3px;
+  background:linear-gradient(90deg,var(--sun),var(--ember),var(--rose));
+}
+
+.qr{
+  width:min(82%,380px); height:auto; display:block;
+  border-radius:12px;
+}
+
+.ask{
+  font-family:var(--display); font-weight:600; font-style:italic;
+  font-size:clamp(1.05rem,2.9vmin,1.5rem);
+  color:var(--ink);
+}
+.services{
+  font-size:clamp(.6rem,1.45vmin,.78rem);
+  font-weight:700; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--ember); line-height:1.9;
+}
+.foot{
+  margin-top:auto; padding-top:clamp(10px,2vmin,18px);
+  border-top:1px solid rgba(44,27,61,.1);
+  width:100%;
+  display:flex; flex-direction:column; gap:.4em;
+}
+.url{
+  font-family:var(--display); font-weight:700;
+  font-size:clamp(.85rem,2.1vmin,1.1rem); color:var(--ink);
+  word-break:break-word;
+}
+.handle{
+  font-size:clamp(.7rem,1.6vmin,.86rem); color:var(--ink-mute); font-weight:600;
+}
+
+@media print{
+  body{background:#fff; padding:0; height:auto}
+  .bg{display:none}
+  .card{box-shadow:none; border:1px solid #E7DED2; width:100%}
+}
+</style>
+</head>
+<body>
+<div class="bg"><div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div></div>
+
+<div class="card">
+  <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="ray" x1="20" y1="1" x2="20" y2="39" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FFC24D"/><stop offset="1" stop-color="#EF6337"/>
+      </linearGradient>
+      <linearGradient id="core" x1="14" y1="13" x2="27" y2="28" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FFDE93"/><stop offset=".52" stop-color="#FFB627"/><stop offset="1" stop-color="#EF8A2A"/>
+      </linearGradient>
+    </defs>
+    <g opacity=".92"><path d="M19.40 11.42 Q19.71 6.20 20.00 1.00 Q20.29 6.20 20.60 11.42 Z M22.84 11.88 Q24.22 9.30 25.51 6.70 Q24.58 9.45 23.73 12.25 Z M25.64 13.51 Q29.55 10.04 33.44 6.56 Q29.96 10.45 26.49 14.36 Z M27.75 16.27 Q30.55 15.42 33.30 14.49 Q30.70 15.78 28.12 17.16 Z M28.58 19.40 Q33.80 19.71 39.00 20.00 Q33.80 20.29 28.58 20.60 Z M28.12 22.84 Q30.70 24.22 33.30 25.51 Q30.55 24.58 27.75 23.73 Z M26.49 25.64 Q29.96 29.55 33.44 33.44 Q29.55 29.96 25.64 26.49 Z M23.73 27.75 Q24.58 30.55 25.51 33.30 Q24.22 30.70 22.84 28.12 Z M20.60 28.58 Q20.29 33.80 20.00 39.00 Q19.71 33.80 19.40 28.58 Z M17.16 28.12 Q15.78 30.70 14.49 33.30 Q15.42 30.55 16.27 27.75 Z M14.36 26.49 Q10.45 29.96 6.56 33.44 Q10.04 29.55 13.51 25.64 Z M12.25 23.73 Q9.45 24.58 6.70 25.51 Q9.30 24.22 11.88 22.84 Z M11.42 20.60 Q6.20 20.29 1.00 20.00 Q6.20 19.71 11.42 19.40 Z M11.88 17.16 Q9.30 15.78 6.70 14.49 Q9.45 15.42 12.25 16.27 Z M13.51 14.36 Q10.04 10.45 6.56 6.56 Q10.45 10.04 14.36 13.51 Z M16.27 12.25 Q15.42 9.45 14.49 6.70 Q15.78 9.30 17.16 11.88 Z" fill="url(#ray)"/></g>
+    <circle cx="20" cy="20" r="7.1" fill="url(#core)"/>
+  </svg>
+
+  <div class="brand">
+    <div class="name">Lotus Realm</div>
+    <div class="who">Stacey &middot; Vancouver</div>
+  </div>
+
+  <div class="rule"></div>
+
+  <svg class="qr" viewBox="0 0 45 45" shape-rendering="crispEdges" role="img" aria-label="QR code linking to staceylotusrealm.github.io">
+    <rect width="45" height="45" fill="#FFFAF2"/>
+    <path d="M4 4h7v1h-7zM13 4h1v1h-1zM17 4h1v1h-1zM19 4h1v1h-1zM23 4h1v1h-1zM25 4h3v1h-3zM31 4h2v1h-2zM34 4h7v1h-7zM4 5h1v1h-1zM10 5h1v1h-1zM12 5h1v1h-1zM14 5h1v1h-1zM19 5h2v1h-2zM22 5h2v1h-2zM26 5h5v1h-5zM32 5h1v1h-1zM34 5h1v1h-1zM40 5h1v1h-1zM4 6h1v1h-1zM6 6h3v1h-3zM10 6h1v1h-1zM13 6h2v1h-2zM17 6h1v1h-1zM19 6h2v1h-2zM26 6h1v1h-1zM28 6h1v1h-1zM31 6h1v1h-1zM34 6h1v1h-1zM36 6h3v1h-3zM40 6h1v1h-1zM4 7h1v1h-1zM6 7h3v1h-3zM10 7h1v1h-1zM13 7h1v1h-1zM15 7h1v1h-1zM17 7h1v1h-1zM20 7h1v1h-1zM22 7h1v1h-1zM26 7h7v1h-7zM34 7h1v1h-1zM36 7h3v1h-3zM40 7h1v1h-1zM4 8h1v1h-1zM6 8h3v1h-3zM10 8h1v1h-1zM18 8h1v1h-1zM20 8h5v1h-5zM28 8h1v1h-1zM31 8h1v1h-1zM34 8h1v1h-1zM36 8h3v1h-3zM40 8h1v1h-1zM4 9h1v1h-1zM10 9h1v1h-1zM12 9h1v1h-1zM14 9h3v1h-3zM19 9h1v1h-1zM22 9h1v1h-1zM26 9h1v1h-1zM32 9h1v1h-1zM34 9h1v1h-1zM40 9h1v1h-1zM4 10h7v1h-7zM12 10h1v1h-1zM14 10h1v1h-1zM16 10h1v1h-1zM18 10h1v1h-1zM20 10h1v1h-1zM22 10h1v1h-1zM24 10h1v1h-1zM26 10h1v1h-1zM28 10h1v1h-1zM30 10h1v1h-1zM32 10h1v1h-1zM34 10h7v1h-7zM12 11h1v1h-1zM14 11h2v1h-2zM18 11h1v1h-1zM21 11h2v1h-2zM24 11h2v1h-2zM28 11h2v1h-2zM8 12h4v1h-4zM13 12h1v1h-1zM15 12h3v1h-3zM24 12h3v1h-3zM29 12h1v1h-1zM31 12h2v1h-2zM34 12h2v1h-2zM39 12h1v1h-1zM4 13h1v1h-1zM8 13h2v1h-2zM11 13h1v1h-1zM13 13h1v1h-1zM15 13h2v1h-2zM18 13h2v1h-2zM21 13h1v1h-1zM23 13h1v1h-1zM25 13h3v1h-3zM30 13h1v1h-1zM34 13h1v1h-1zM37 13h2v1h-2zM4 14h2v1h-2zM7 14h8v1h-8zM16 14h1v1h-1zM18 14h3v1h-3zM22 14h1v1h-1zM25 14h1v1h-1zM29 14h3v1h-3zM33 14h1v1h-1zM36 14h1v1h-1zM4 15h1v1h-1zM6 15h1v1h-1zM9 15h1v1h-1zM13 15h1v1h-1zM18 15h1v1h-1zM20 15h1v1h-1zM22 15h4v1h-4zM27 15h1v1h-1zM30 15h4v1h-4zM35 15h4v1h-4zM5 16h4v1h-4zM10 16h1v1h-1zM13 16h2v1h-2zM18 16h1v1h-1zM21 16h1v1h-1zM23 16h2v1h-2zM33 16h3v1h-3zM40 16h1v1h-1zM4 17h1v1h-1zM6 17h2v1h-2zM12 17h1v1h-1zM14 17h1v1h-1zM17 17h1v1h-1zM22 17h1v1h-1zM26 17h4v1h-4zM31 17h3v1h-3zM36 17h1v1h-1zM38 17h1v1h-1zM4 18h5v1h-5zM10 18h4v1h-4zM16 18h1v1h-1zM18 18h2v1h-2zM21 18h1v1h-1zM23 18h1v1h-1zM25 18h1v1h-1zM29 18h1v1h-1zM31 18h2v1h-2zM34 18h1v1h-1zM36 18h3v1h-3zM12 19h1v1h-1zM16 19h2v1h-2zM19 19h1v1h-1zM22 19h1v1h-1zM24 19h5v1h-5zM30 19h2v1h-2zM33 19h1v1h-1zM35 19h2v1h-2zM38 19h1v1h-1zM5 20h2v1h-2zM10 20h3v1h-3zM15 20h4v1h-4zM20 20h2v1h-2zM24 20h1v1h-1zM26 20h3v1h-3zM32 20h4v1h-4zM37 20h2v1h-2zM40 20h1v1h-1zM4 21h2v1h-2zM7 21h1v1h-1zM11 21h2v1h-2zM15 21h1v1h-1zM18 21h10v1h-10zM29 21h1v1h-1zM31 21h2v1h-2zM36 21h1v1h-1zM4 22h4v1h-4zM10 22h1v1h-1zM14 22h1v1h-1zM16 22h2v1h-2zM19 22h2v1h-2zM22 22h1v1h-1zM26 22h1v1h-1zM30 22h3v1h-3zM35 22h1v1h-1zM4 23h1v1h-1zM7 23h2v1h-2zM16 23h1v1h-1zM19 23h2v1h-2zM23 23h4v1h-4zM30 23h2v1h-2zM34 23h1v1h-1zM36 23h1v1h-1zM38 23h3v1h-3zM4 24h1v1h-1zM7 24h1v1h-1zM9 24h2v1h-2zM12 24h1v1h-1zM14 24h1v1h-1zM18 24h2v1h-2zM21 24h2v1h-2zM24 24h2v1h-2zM27 24h2v1h-2zM33 24h2v1h-2zM38 24h1v1h-1zM40 24h1v1h-1zM8 25h2v1h-2zM11 25h1v1h-1zM13 25h2v1h-2zM16 25h1v1h-1zM18 25h2v1h-2zM22 25h2v1h-2zM29 25h3v1h-3zM36 25h3v1h-3zM10 26h1v1h-1zM12 26h4v1h-4zM17 26h2v1h-2zM20 26h1v1h-1zM22 26h1v1h-1zM26 26h1v1h-1zM28 26h1v1h-1zM31 26h3v1h-3zM37 26h2v1h-2zM4 27h1v1h-1zM6 27h4v1h-4zM12 27h1v1h-1zM14 27h2v1h-2zM17 27h2v1h-2zM20 27h2v1h-2zM24 27h1v1h-1zM26 27h1v1h-1zM28 27h1v1h-1zM30 27h1v1h-1zM32 27h1v1h-1zM35 27h1v1h-1zM38 27h1v1h-1zM4 28h2v1h-2zM7 28h2v1h-2zM10 28h1v1h-1zM13 28h1v1h-1zM16 28h6v1h-6zM26 28h1v1h-1zM29 28h3v1h-3zM34 28h1v1h-1zM36 28h1v1h-1zM38 28h1v1h-1zM4 29h2v1h-2zM9 29h1v1h-1zM11 29h2v1h-2zM15 29h4v1h-4zM22 29h5v1h-5zM28 29h2v1h-2zM32 29h7v1h-7zM7 30h1v1h-1zM10 30h2v1h-2zM13 30h1v1h-1zM18 30h2v1h-2zM21 30h1v1h-1zM23 30h3v1h-3zM27 30h3v1h-3zM32 30h2v1h-2zM35 30h1v1h-1zM37 30h1v1h-1zM7 31h2v1h-2zM11 31h1v1h-1zM14 31h1v1h-1zM16 31h1v1h-1zM18 31h1v1h-1zM20 31h1v1h-1zM23 31h2v1h-2zM26 31h2v1h-2zM30 31h1v1h-1zM34 31h1v1h-1zM4 32h3v1h-3zM8 32h4v1h-4zM14 32h2v1h-2zM17 32h2v1h-2zM20 32h1v1h-1zM22 32h2v1h-2zM26 32h1v1h-1zM28 32h1v1h-1zM31 32h6v1h-6zM39 32h2v1h-2zM12 33h1v1h-1zM14 33h1v1h-1zM17 33h2v1h-2zM20 33h1v1h-1zM23 33h3v1h-3zM27 33h1v1h-1zM29 33h1v1h-1zM31 33h2v1h-2zM36 33h2v1h-2zM4 34h7v1h-7zM12 34h1v1h-1zM14 34h1v1h-1zM17 34h1v1h-1zM19 34h2v1h-2zM22 34h1v1h-1zM24 34h2v1h-2zM27 34h1v1h-1zM29 34h1v1h-1zM32 34h1v1h-1zM34 34h1v1h-1zM36 34h3v1h-3zM4 35h1v1h-1zM10 35h1v1h-1zM12 35h2v1h-2zM17 35h1v1h-1zM19 35h3v1h-3zM23 35h1v1h-1zM25 35h2v1h-2zM28 35h1v1h-1zM32 35h1v1h-1zM36 35h1v1h-1zM38 35h2v1h-2zM4 36h1v1h-1zM6 36h3v1h-3zM10 36h1v1h-1zM12 36h4v1h-4zM21 36h8v1h-8zM32 36h9v1h-9zM4 37h1v1h-1zM6 37h3v1h-3zM10 37h1v1h-1zM14 37h1v1h-1zM16 37h4v1h-4zM22 37h2v1h-2zM25 37h1v1h-1zM29 37h3v1h-3zM34 37h2v1h-2zM37 37h1v1h-1zM4 38h1v1h-1zM6 38h3v1h-3zM10 38h1v1h-1zM13 38h2v1h-2zM18 38h1v1h-1zM20 38h3v1h-3zM25 38h1v1h-1zM29 38h1v1h-1zM31 38h1v1h-1zM34 38h1v1h-1zM38 38h2v1h-2zM4 39h1v1h-1zM10 39h1v1h-1zM14 39h1v1h-1zM22 39h1v1h-1zM24 39h1v1h-1zM26 39h1v1h-1zM28 39h1v1h-1zM34 39h2v1h-2zM38 39h2v1h-2zM4 40h7v1h-7zM16 40h6v1h-6zM23 40h3v1h-3zM27 40h2v1h-2zM30 40h2v1h-2zM33 40h1v1h-1zM37 40h4v1h-4z" fill="#2C1B3D"/>
+  </svg>
+
+  <div class="ask">Scan to book a session</div>
+  <div class="services">
+    Holy Fire III Reiki &middot; Soul Path Astrology<br>
+    Deep Memory Process &middot; Tarot &middot; Workshops
+  </div>
+
+  <div class="foot">
+    <div class="url">staceylotusrealm.github.io</div>
+    <div class="handle">@staceylotusrealm &nbsp;&middot;&nbsp; lotusrealm@shaw.ca</div>
+  </div>
+</div>
+</body>
+</html>
